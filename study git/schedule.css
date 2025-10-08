@@ -1,0 +1,129 @@
+:root {
+  --bg-dark: #0a0b12;
+  --bg-light: #f7f7f7;
+  --card-dark: #171723;
+  --card-light: #ffffff;
+  --gradient: linear-gradient(135deg, #8b5cf6, #ec4899);
+  --text-dark: #e8e8e8;
+  --text-light: #111;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  display: flex;
+  transition: 0.3s;
+}
+
+.sidebar {
+  width: 220px;
+  padding: 1.5rem;
+  background: #13121b;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background: var(--gradient);
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-btn {
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(236,72,153,0.4);
+}
+
+.schedule-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.day-card {
+  background: var(--card-dark);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(168,85,247,0.2);
+}
+
+.day-card h3 {
+  color: #d8b4fe;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-top: 0.5rem;
+}
+
+.light .day-card {
+  background: var(--card-light);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.note-card h3 {
+  color: #d8b4fe;
+}
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+.light .note-card {
+  background: var(--card-light);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.light .sidebar {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

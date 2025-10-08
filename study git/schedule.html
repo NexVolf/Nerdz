@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule - NerdZ Teacher</title>
+  <link rel="stylesheet" href="schedule.css">
+</head>
+<body class="dark">
+  <aside class="sidebar">
+    <h2 class="logo">NerdZ</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="tests-quizzes.html">Tests & Quizzes</a>
+      <a href="schedule.html" class="active">Schedule</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header>
+      <h1>My Schedule</h1>
+      <div class="header-actions">
+        <button id="themeToggle">☀️</button>
+        <button class="add-btn">+ Add Event</button>
+      </div>
+    </header>
+
+    <section class="schedule-grid">
+      <div class="day-card">
+        <h3>Monday</h3>
+        <ul>
+          <li>9:00 AM - Math (Calculus)</li>
+          <li>11:00 AM - Physics Lab</li>
+        </ul>
+      </div>
+      <div class="day-card">
+        <h3>Tuesday</h3>
+        <ul>
+          <li>8:30 AM - CS Project Review</li>
+          <li>2:00 PM - Parent Meeting</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+    });
+  </script>
+</body>
+</html>

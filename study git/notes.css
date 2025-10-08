@@ -1,0 +1,151 @@
+:root {
+  --bg-dark: #0b0c10;
+  --bg-light: #fdfdfd;
+  --card-dark: #1b1c27;
+  --card-light: #ffffff;
+  --gradient: linear-gradient(135deg, #a855f7, #ec4899);
+  --text-dark: #e8e8e8;
+  --text-light: #111;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  padding: 1.5rem;
+  background: #13121b;
+  box-shadow: 0 0 10px rgba(168,85,247,0.25);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background: var(--gradient);
+  color: #fff;
+}
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-btn {
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(236,72,153,0.4);
+}
+
+.notes-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.note-card {
+  background: var(--card-dark);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(168,85,247,0.2);
+  transition: 0.3s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(236,72,153,0.4);
+}
+
+.note-card h3 {
+  color: #d8b4fe;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+.light .note-card {
+  background: var(--card-light);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.light .sidebar {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.light .logo {
+  color: var(--text-light);
+}   
+.light nav a {
+  color: var(--text-light);
+}
+.light nav a:hover, .light nav a.active {
+  color: #fff;
+  background: var(--gradient);
+}
+.light .add-btn {
+  box-shadow: 0 0 10px rgba(236,72,153,0.2);
+}
+.light header {
+  margin-bottom: 1.5rem;
+}
+/* @@ -89,16 +89,22 @@ */
+.note-card h3 {
+  color: #d8b4fe;
+}
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+.light .note-card {
+  background: var(--card-light);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.light .sidebar {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 100vh;
+}

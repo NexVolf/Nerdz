@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes - NerdZ Teacher</title>
+  <link rel="stylesheet" href="notes.css">
+</head>
+<body class="dark">
+  <aside class="sidebar">
+    <h2 class="logo">NerdZ</h2>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="tests-quizzes.html">Tests & Quizzes</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="notes.html" class="active">Notes</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header>
+      <h1>Notes</h1>
+      <div class="header-actions">
+        <button id="themeToggle">☀️</button>
+        <button class="add-btn">+ Add Note</button>
+      </div>
+    </header>
+
+    <section class="notes-grid">
+      <div class="note-card">
+        <h3>Thermodynamics Summary</h3>
+        <p>Quick recap of 1st & 2nd laws of thermodynamics with diagrams.</p>
+      </div>
+      <div class="note-card">
+        <h3>Integration Tricks</h3>
+        <p>Use substitution and partial fractions for simplification.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+    });
+  </script>
+</body>
+</html>
